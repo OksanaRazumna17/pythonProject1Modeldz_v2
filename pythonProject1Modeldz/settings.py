@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-z0cpgx&6^uls$mw)zmfwgvdei$@k^j=+xa82r!48(h$)p329dy'
+SECRET_KEY = 'django-insecure-z0pgx&6^uls$mw)zmfwgvdei$@k^j=+xa82r!48(h$)p329dy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tasks',  # Не забудь добавить это
+    'tasks',  # Убедитесь, что приложение tasks добавлено
 ]
 
 MIDDLEWARE = [
@@ -108,5 +108,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
 
 
