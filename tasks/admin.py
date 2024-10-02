@@ -5,3 +5,4 @@ admin.site.register(Task)
 admin.site.register(SubTask)
 admin.site.register(Category)
 
+
