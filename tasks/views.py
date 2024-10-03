@@ -4,28 +4,42 @@ from rest_framework.response import Response
 from django.utils import timezone
 from django.db.models import Count
 from .models import Task, SubTask
-from .serializers import TaskSerializer, TaskDetailSerializer, TaskCreateSerializer, SubTaskSerializer, SubTaskCreateSerializer
+from .serializers import TaskSerializer, TaskCreateSerializer, TaskDetailSerializer, SubTaskSerializer, \
+    SubTaskCreateSerializer
 
-# Представление для создания задачи с использованием TaskCreateSerializer
-class TaskCreateView(generics.CreateAPIView):
+
+# Представление для создания и получения списка задач с пагинацией, фильтрацией, поиском и сортировкой
+class TaskListCreateView(generics.ListCreateAPIView):
     queryset = Task.objects.all()
-    serializer_class = TaskCreateSerializer  # Используем сериализатор с валидацией дедлайна
+    serializer_class = TaskCreateSerializer
 
-# Представление для получения списка задач с фильтрацией и пагинацией
-class TaskListView(generics.ListAPIView):
-    queryset = Task.objects.all()
-    serializer_class = TaskSerializer
-
-    # Фильтрация по статусу и дедлайну
     def get_queryset(self):
         queryset = super().get_queryset()
+
+        # Фильтрация по статусу и дедлайну
         status = self.request.query_params.get('status')
         deadline = self.request.query_params.get('deadline')
         if status:
             queryset = queryset.filter(status=status)
         if deadline:
             queryset = queryset.filter(deadline__lte=deadline)
+
+        # Поиск по title и description
+        search = self.request.query_params.get('search')
+        if search:
+            queryset = queryset.filter(title__icontains=search) | queryset.filter(description__icontains=search)
+
+        # Сортировка по created_at
+        queryset = queryset.order_by('created_at')
+
         return queryset
+
+
+# Представление для получения, обновления и удаления задачи
+class TaskDetailUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+
 
 # Агрегирующее представление для получения статистики задач
 class TaskStatsView(APIView):
@@ -41,13 +55,38 @@ class TaskStatsView(APIView):
         }
         return Response(stats)
 
-# Представление для создания и получения списка подзадач
+
+# Представление для создания и получения списка подзадач с пагинацией, фильтрацией, поиском и сортировкой
 class SubTaskListCreateView(generics.ListCreateAPIView):
     queryset = SubTask.objects.all()
-    serializer_class = SubTaskCreateSerializer  # Используем сериализатор для создания подзадач
+    serializer_class = SubTaskCreateSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+
+        # Фильтрация по статусу и дедлайну
+        status = self.request.query_params.get('status')
+        deadline = self.request.query_params.get('deadline')
+        if status:
+            queryset = queryset.filter(status=status)
+        if deadline:
+            queryset = queryset.filter(deadline__lte=deadline)
+
+        # Поиск по title и description
+        search = self.request.query_params.get('search')
+        if search:
+            queryset = queryset.filter(title__icontains=search) | queryset.filter(description__icontains=search)
+
+        # Сортировка по created_at
+        queryset = queryset.order_by('created_at')
+
+        return queryset
+
 
 # Представление для получения, обновления и удаления подзадач
 class SubTaskDetailUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
     queryset = SubTask.objects.all()
     serializer_class = SubTaskSerializer
+
+
 
