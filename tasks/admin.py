@@ -20,3 +20,9 @@ class SubTaskAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ('name',)
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7

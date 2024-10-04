@@ -6,6 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # Задаем корректное имя настроек Django
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pythonProject1Modeldz.settings')
 
     try:

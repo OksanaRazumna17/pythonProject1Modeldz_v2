@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from rest_framework import generics, viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -5,6 +6,16 @@ from django.utils import timezone
 from django.db.models import Count
 from .models import Task, SubTask, Category
 from .serializers import TaskSerializer, TaskCreateSerializer, TaskDetailSerializer, SubTaskSerializer, SubTaskCreateSerializer, CategorySerializer
+=======
+from rest_framework import generics
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.utils import timezone
+from django.db.models import Count
+from .models import Task, SubTask
+from .serializers import TaskSerializer, TaskCreateSerializer, TaskDetailSerializer, SubTaskSerializer, \
+    SubTaskCreateSerializer
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
 
 
 # Представление для создания и получения списка задач с пагинацией, фильтрацией, поиском и сортировкой
@@ -37,11 +48,19 @@ class TaskListCreateView(generics.ListCreateAPIView):
 # Представление для получения, обновления и удаления задачи
 class TaskDetailUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
+<<<<<<< HEAD
     serializer_class = TaskDetailSerializer
 
 
 # Агрегирующее представление для получения статистики задач
 class TaskStatsView(generics.GenericAPIView):
+=======
+    serializer_class = TaskSerializer
+
+
+# Агрегирующее представление для получения статистики задач
+class TaskStatsView(APIView):
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
     def get(self, request, *args, **kwargs):
         total_tasks = Task.objects.count()
         tasks_by_status = Task.objects.values('status').annotate(count=Count('status'))
@@ -88,6 +107,7 @@ class SubTaskDetailUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = SubTaskSerializer
 
 
+<<<<<<< HEAD
 # Представление для категорий с кастомным методом для подсчета задач
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
@@ -98,4 +118,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
         category = self.get_object()
         task_count = Task.objects.filter(category=category).count()
         return Response({'task_count': task_count})
+=======
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
 

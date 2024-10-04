@@ -22,7 +22,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',  # Добавлено для DRF
+<<<<<<< HEAD
     'tasks',  # Убедитесь, что приложение tasks добавлено
+=======
+    'tasks',  # Приложение задач
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
 ]
 
 MIDDLEWARE = [
@@ -105,10 +109,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# For media files (optional)
+# Дополнительные настройки для разработки
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# Если используешь медиа-файлы
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+<<<<<<< HEAD
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Настройки глобальной пагинации
@@ -126,3 +134,10 @@ REST_FRAMEWORK = {
 
 
 
+=======
+# Настройки Django REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10  # Пагинация для API
+}
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7

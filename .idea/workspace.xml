@@ -5,17 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab1e7275-2c46-4bea-8019-692b47b628f7" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pythonProject1Modeldz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject1Modeldz.iml" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/tasks/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/fix_paths.py" afterDir="false" />
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fix_paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/fix_paths.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pythonProject1Modeldz/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1Modeldz/asgi.py" afterDir="false" />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+      <change beforePath="$PROJECT_DIR$/pythonProject1Modeldz/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1Modeldz/settings.py" afterDir="false" />
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
       <change beforePath="$PROJECT_DIR$/pythonProject1Modeldz/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1Modeldz/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/admin.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+>>>>>>> origin/master
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +67,14 @@
     &quot;accountId&quot;: &quot;30927b42-cfab-4502-b701-b02dde18f9c5&quot;
   }
 }</component>
+<<<<<<< HEAD
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/tasks/admin.py" root0="SKIP_HIGHLIGHTING" />
+  </component>
+=======
+>>>>>>> origin/master
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -56,6 +85,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.manage.executor": "Run",
@@ -71,6 +101,22 @@
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/oksus/PycharmСategory_questi_Projects/pythonProject1Modeldz/tasks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,8 +128,12 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+<<<<<<< HEAD
         <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
         <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+=======
+        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
       </set>
     </attachedChunks>
   </component>
@@ -96,11 +146,22 @@
       <option name="presentableId" value="Default" />
       <updated>1726937988707</updated>
       <workItem from="1726942367447" duration="6892000" />
+<<<<<<< HEAD
+      <workItem from="1726949357862" duration="6064000" />
+      <workItem from="1726955518949" duration="1572000" />
+      <workItem from="1726957660300" duration="2137000" />
+      <workItem from="1726993046478" duration="74000" />
+=======
       <workItem from="1726949357862" duration="2904000" />
       <workItem from="1726994758206" duration="4983000" />
+<<<<<<< HEAD
       <workItem from="1727019577137" duration="5278000" />
       <workItem from="1728057768335" duration="150000" />
       <workItem from="1728057969757" duration="3073000" />
+=======
+      <workItem from="1727019577137" duration="4240000" />
+>>>>>>> origin/master
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
     </task>
     <servers />
   </component>

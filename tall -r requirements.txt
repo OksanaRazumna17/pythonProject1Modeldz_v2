@@ -1,0 +1,100 @@
+warning: in the working copy of '.idea/workspace.xml', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mindex eef80a7..ff6961a 100644[m
+[1m--- a/.idea/workspace.xml[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -5,14 +5,9 @@[m
+   </component>[m
+   <component name="ChangeListManager">[m
+     <list default="true" id="ab1e7275-2c46-4bea-8019-692b47b628f7" name="Changes" comment="">[m
+[31m-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />[m
+[31m-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />[m
+[31m-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />[m
+[31m-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />[m
+[31m-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject1Modeldz.iml" afterDir="false" />[m
+[31m-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />[m
+[31m-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />[m
+[31m-      <change afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />[m
+[32m+[m[32m      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />[m
+[32m+[m[32m      <change beforePath="$PROJECT_DIR$/pythonProject1Modeldz/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1Modeldz/wsgi.py" afterDir="false" />[m
+[32m+[m[32m      <change beforePath="$PROJECT_DIR$/tasks/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/admin.py" afterDir="false" />[m
+     </list>[m
+     <option name="SHOW_DIALOG" value="false" />[m
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />[m
+[36m@@ -29,14 +24,23 @@[m
+   <component name="Git.Settings">[m
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />[m
+   </component>[m
+[31m-  <component name="GithubPullRequestsUISettings"><![CDATA[{[m
+[31m-  "selectedUrlAndAccountId": {[m
+[31m-    "url": "https://github.com/OksanaRazumna17/pythonProject1Modeldz.git",[m
+[31m-    "accountId": "30927b42-cfab-4502-b701-b02dde18f9c5"[m
+[32m+[m[32m  <component name="GitHubPullRequestSearchHistory">{[m
+[32m+[m[32m  &quot;lastFilter&quot;: {[m
+[32m+[m[32m    &quot;state&quot;: &quot;OPEN&quot;,[m
+[32m+[m[32m    &quot;assignee&quot;: &quot;OksanaRazumna17&quot;[m
+   }[m
+[31m-}]]></component>[m
+[32m+[m[32m}</component>[m
+[32m+[m[32m  <component name="GithubPullRequestsUISettings">{[m
+[32m+[m[32m  &quot;selectedUrlAndAccountId&quot;: {[m
+[32m+[m[32m    &quot;url&quot;: &quot;https://github.com/OksanaRazumna17/pythonProject1Modeldz.git&quot;,[m
+[32m+[m[32m    &quot;accountId&quot;: &quot;30927b42-cfab-4502-b701-b02dde18f9c5&quot;[m
+[32m+[m[32m  }[m
+[32m+[m[32m}</component>[m
+[32m+[m[32m  <component name="HighlightingSettingsPerFile">[m
+[32m+[m[32m    <setting file="file://$PROJECT_DIR$/tasks/admin.py" root0="SKIP_HIGHLIGHTING" />[m
+[32m+[m[32m  </component>[m
+   <component name="ProblemsViewState">[m
+[31m-    <option name="selectedTabId" value="CurrentFile" />[m
+[32m+[m[32m    <option name="selectedTabId" value="ProjectErrors" />[m
+   </component>[m
+   <component name="ProjectColorInfo">{[m
+   &quot;associatedIndex&quot;: 8[m
+[36m@@ -85,7 +89,8 @@[m
+       <option name="presentableId" value="Default" />[m
+       <updated>1726937988707</updated>[m
+       <workItem from="1726942367447" duration="6892000" />[m
+[31m-      <workItem from="1726949357862" duration="2904000" />[m
+[32m+[m[32m      <workItem from="1726949357862" duration="6064000" />[m
+[32m+[m[32m      <workItem from="1726955518949" duration="1077000" />[m
+     </task>[m
+     <servers />[m
+   </component>[m
+[1mdiff --git a/manage.py b/manage.py[m
+[1mindex e9102bf..ad4d1a9 100644[m
+[1m--- a/manage.py[m
+[1m+++ b/manage.py[m
+[36m@@ -6,7 +6,7 @@[m [mimport sys[m
+ [m
+ def main():[m
+     """Run administrative tasks."""[m
+[31m-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'с.settings')[m
+[32m+[m[32m    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'c.settings')[m
+ [m
+ [m
+     try:[m
+[1mdiff --git a/pythonProject1Modeldz/wsgi.py b/pythonProject1Modeldz/wsgi.py[m
+[1mindex 0c437dc..e9f71a3 100644[m
+[1m--- a/pythonProject1Modeldz/wsgi.py[m
+[1m+++ b/pythonProject1Modeldz/wsgi.py[m
+[36m@@ -8,9 +8,9 @@[m [mhttps://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/[m
+ """[m
+ [m
+ import os[m
+[31m-[m
+ from django.core.wsgi import get_wsgi_application[m
+ [m
+ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pythonProject1Modeldz.settings')[m
+ [m
+ application = get_wsgi_application()[m
+[41m+[m
+[1mdiff --git a/tasks/admin.py b/tasks/admin.py[m
+[1mindex d7496f0..f737110 100644[m
+[1m--- a/tasks/admin.py[m
+[1m+++ b/tasks/admin.py[m
+[36m@@ -5,3 +5,4 @@[m [madmin.site.register(Task)[m
+ admin.site.register(SubTask)[m
+ admin.site.register(Category)[m
+ [m
+[41m+[m

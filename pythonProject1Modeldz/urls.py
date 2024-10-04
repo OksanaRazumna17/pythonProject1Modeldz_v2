@@ -1,4 +1,5 @@
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from tasks.views import CategoryViewSet, TaskListCreateView, TaskDetailUpdateDeleteView, TaskStatsView, SubTaskListCreateView, SubTaskDetailUpdateDeleteView
@@ -9,6 +10,14 @@ router.register(r'categories', CategoryViewSet)  # Регистрируем Cate
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Маршрут для админки
+=======
+from django.urls import path
+from tasks.views import TaskListCreateView, TaskDetailUpdateDeleteView, TaskStatsView
+from tasks.views import SubTaskListCreateView, SubTaskDetailUpdateDeleteView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
 
     # Маршруты для задач (Tasks)
     path('tasks/', TaskListCreateView.as_view(), name='task-list-create'),
@@ -18,8 +27,13 @@ urlpatterns = [
     # Маршруты для подзадач (SubTasks)
     path('subtasks/', SubTaskListCreateView.as_view(), name='subtask-list-create'),
     path('subtasks/<int:pk>/', SubTaskDetailUpdateDeleteView.as_view(), name='subtask-detail-update-delete'),
+<<<<<<< HEAD
 
     # Включаем маршруты для категорий
     path('', include(router.urls)),  # Подключаем автоматически сгенерированные маршруты
+=======
+>>>>>>> d537b4c725591d69992d09d5edbd19bde1c69ea7
 ]
+
+
 
