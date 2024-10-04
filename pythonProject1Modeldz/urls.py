@@ -1,23 +1,25 @@
-"""
-URL configuration for pythonProject1Modeldz project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views:
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views:
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf:
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from tasks.views import CategoryViewSet, TaskListCreateView, TaskDetailUpdateDeleteView, TaskStatsView, SubTaskListCreateView, SubTaskDetailUpdateDeleteView
+
+# Создаем роутер для автоматической генерации маршрутов
+router = DefaultRouter()
+router.register(r'categories', CategoryViewSet)  # Регистрируем CategoryViewSet
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),  # Маршрут для админки
+
+    # Маршруты для задач (Tasks)
+    path('tasks/', TaskListCreateView.as_view(), name='task-list-create'),
+    path('tasks/<int:pk>/', TaskDetailUpdateDeleteView.as_view(), name='task-detail-update-delete'),
+    path('tasks/stats/', TaskStatsView.as_view(), name='task-stats'),
+
+    # Маршруты для подзадач (SubTasks)
+    path('subtasks/', SubTaskListCreateView.as_view(), name='subtask-list-create'),
+    path('subtasks/<int:pk>/', SubTaskDetailUpdateDeleteView.as_view(), name='subtask-detail-update-delete'),
+
+    # Включаем маршруты для категорий
+    path('', include(router.urls)),  # Подключаем автоматически сгенерированные маршруты
 ]
 

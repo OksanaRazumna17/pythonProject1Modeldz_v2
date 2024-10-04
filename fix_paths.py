@@ -1,5 +1,3 @@
-import os
-
 # Укажи имя проекта, которое должно быть везде (замени на правильное)
 correct_project_name = 'pythonProject1Modeldz'
 

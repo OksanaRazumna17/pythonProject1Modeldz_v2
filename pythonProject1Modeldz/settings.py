@@ -1,4 +1,5 @@
 from pathlib import Path
+from rest_framework.pagination import PageNumberPagination
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',  # Добавлено для DRF
     'tasks',  # Убедитесь, что приложение tasks добавлено
 ]
 
@@ -108,6 +110,19 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# Настройки глобальной пагинации
+class CustomPageNumberPagination(PageNumberPagination):
+    page_size = 5  # Размер страницы по умолчанию
+    page_size_query_param = 'page_size'  # Опционально: позволяй клиенту изменять размер страницы
+    max_page_size = 100  # Максимальный размер страницы
+
+# Настройки Django REST Framework с указанием глобальной пагинации
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'pythonProject1Modeldz.settings.CustomPageNumberPagination',  # Указание на класс пагинации
+    'PAGE_SIZE': 5,  # Размер страницы по умолчанию
+}
+
 
 
 
